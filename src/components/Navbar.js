@@ -19,12 +19,12 @@ const Navbar = (props) => {
           <a className="nav-link" href="/">{props.aboutText}</a>
         </li>
       </ul>
-      <button type="button" class="btn btn-sm mx-4 text-light" style={{backgroundColor: "#0d5408"}}>Green</button>
-      <button type="button" class="btn btn-sm text-light" style={{backgroundColor: "#220154"}}>Purple</button>
-      <button type="button" class="btn btn-sm mx-4 text-light" style={{backgroundColor: "#3d0047"}}>Magenta</button>
+      <button type="button" class="btn btn-sm mx-2 my-1 text-light" style={{backgroundColor: "#0d5408", display: props.mode==="light"?"none":"block"}}>Green</button>
+      <button type="button" class="btn btn-sm mx-2 my-1 text-light" style={{backgroundColor: "#220154", display: props.mode==="light"?"none":"block"}}>Purple</button>
+      <button type="button" class="btn btn-sm mx-2 my-1 text-light" style={{backgroundColor: "#3d0047", display: props.mode==="light"?"none":"block"}}>Magenta</button>
       <div className="form-check form-switch">
       <input className="form-check-input" onClick={props.toggleMode} type="checkbox" id="flexSwitchCheckDefault"/>
-      <label className={`form-check-label text-${props.mode==="light"?"dark":"light"}`} htmlFor="flexSwitchCheckDefault">Enable Dark mode</label>
+      <label className={`form-check-label text-${props.mode==="light"?"dark":"light"}`} htmlFor="flexSwitchCheckDefault">Enable {props.mode==="light"?"Dark":"Light"} mode</label>
       </div>
     </div>
   </div>
