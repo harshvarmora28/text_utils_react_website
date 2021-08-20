@@ -3,8 +3,27 @@ import PropTypes from 'prop-types'
 
 
 const Navbar = (props) => {
+  function setNavbarBcg(mode, theme){
+    if(mode ==="dark" && theme==="green"){
+        var color="#0d3b12"
+    }
+    else if(mode ==="dark" && theme==="purple"){
+        color="#33124d"
+    }
+    else if(mode ==="dark" && theme==="magenta"){
+        color="#4a123f"
+    }
+    else if(mode ==="dark" && theme==="default"){
+        color="#18323e"
+    }
+    else if(mode ==="light"){
+        color="rgb(252 252 252)"
+    }
+    return color;
+}
     return (
-        <nav className={`navbar navbar-expand-lg navbar-${props.mode}`} style={{backgroundColor: props.mode==="dark"?"#18323e":"rgb(252 252 252)"}}>
+        // <nav className={`navbar navbar-expand-lg navbar-${props.mode}`} style={{backgroundColor: props.mode==="dark"?"#18323e":"rgb(252 252 252)"}}>
+        <nav className={`navbar navbar-expand-lg navbar-${props.mode}`} style={{backgroundColor: setNavbarBcg(props.mode, props.theme)}}>
   <div className="container-fluid">
     <a className="navbar-brand" href="/">{props.title}</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

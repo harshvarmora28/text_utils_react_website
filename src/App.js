@@ -9,7 +9,7 @@ import Alert from './components/Alert';
 function App() {
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null)
-  const [theme, setTheme] = useState("purple")
+  const [theme, setTheme] = useState("default")
 
   
   
@@ -37,33 +37,33 @@ function App() {
   const togglePurpleTheme = () => {
     if(theme === "purple"){
       setTheme("default");
-      document.body.style.backgroundColor = "#160821";
+      document.body.style.backgroundColor = "#091921";
     }
     else{
       setTheme("purple");
-      document.body.style.backgroundColor = "#091921";
+      document.body.style.backgroundColor = "#160821";
     }
   }
 
   const toggleGreenTheme = () => {
     if(theme === "green"){
       setTheme("default");
-      document.body.style.backgroundColor = "#08210b";
+      document.body.style.backgroundColor = "#091921";
     }
     else{
       setTheme("green");
-      document.body.style.backgroundColor = "#091921";
+      document.body.style.backgroundColor = "#08210b";
     }
   }
 
   const toggleMagnetaTheme = () => {
-    if(theme === "magneta"){
+    if(theme === "magenta"){
       setTheme("default");
-      document.body.style.backgroundColor = "#21081c";
+      document.body.style.backgroundColor = "#091921";
     }
     else{
-      setTheme("magneta");
-      document.body.style.backgroundColor = "#091921";
+      setTheme("magenta");
+      document.body.style.backgroundColor = "#21081c";
     }
   }
   return (
