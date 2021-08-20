@@ -22,15 +22,15 @@ const Navbar = (props) => {
       {/* <button type="button" className="btn btn-sm mx-2 my-1 text-light" style={{backgroundColor: "#0d5408", display: props.mode==="light"?"none":"block"}}>Green</button>
       <button type="button" className="btn btn-sm mx-2 my-1 text-light" style={{backgroundColor: "#220154", display: props.mode==="light"?"none":"block"}}>Purple</button>
       <button type="button" className="btn btn-sm mx-2 my-1 text-light" style={{backgroundColor: "#3d0047", display: props.mode==="light"?"none":"block"}}>Magenta</button> */}
-      <div className="form-check form-switch mx-3 my-1">
+      <div className="form-check form-switch mx-3 my-1" onClick={props.toggleGreenTheme} >
         <input className="form-check-input" style={{backgroundColor: "#138a1b", display: props.mode==="light"?"none":"block"}} type="checkbox" id="flexSwitchCheckDefault"/>
         <label className="form-check-label" style={{color: "rgb(235 235 235)", display: props.mode==="light"?"none":"block"}} htmlFor="flexSwitchCheckDefault">Green Theme</label>
       </div>
-      <div className="form-check form-switch mx-3 my-1">
+      <div className="form-check form-switch mx-3 my-1" onClick={props.togglePurpleTheme} >
         <input className="form-check-input" style={{backgroundColor: "#6600eb", display: props.mode==="light"?"none":"block"}} type="checkbox" id="flexSwitchCheckDefault"/>
         <label className="form-check-label" style={{color: "rgb(235 235 235)", display: props.mode==="light"?"none":"block"}} htmlFor="flexSwitchCheckDefault" >Purple Theme</label>
       </div>
-      <div className="form-check form-switch mx-3 my-1">
+      <div className="form-check form-switch mx-3 my-1" onClick={props.toggleMagnetaTheme} >
         <input className="form-check-input" style={{backgroundColor: "#b700d4", display: props.mode==="light"?"none":"block"}} type="checkbox" id="flexSwitchCheckDefault"/>
         <label className="form-check-label" style={{color: "rgb(235 235 235)", display: props.mode==="light"?"none":"block"}} htmlFor="flexSwitchCheckDefault">Magenta Theme</label>
       </div>
