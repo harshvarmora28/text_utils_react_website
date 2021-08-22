@@ -21,6 +21,10 @@ const TextForm = (props) => {
         // console.log("On change");
         setText(event.target.value);
     }
+    const handleExtraSpaces = () => {
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" "));
+    }
     function wordCounter(text) {
         let wordNumber = text.split(' ').filter(
             function (n) { return n !== ''}
@@ -99,7 +103,8 @@ const TextForm = (props) => {
             <button type="button" className="btn my-3 mx-1" style={{backgroundColor: setBtnBcg(props.mode, props.theme), color: props.mode==="dark"?"rgb(235 235 235)":"rgb(252 252 252)"}} onClick={handelLoClick} >Convert to Lowercase</button>
             {/* <button type="button" className="btn my-3 mx-1" style={{backgroundColor: props.mode==="dark"?"#18323e":"rgb(36 40 44)", color: props.mode==="dark"?"rgb(235 235 235)":"rgb(252 252 252)"}} onClick={handelCopyClick} >Copy to Clipboard</button> */}
             <button type="button" className="btn my-3 mx-1" style={{backgroundColor: setBtnBcg(props.mode, props.theme), color: props.mode==="dark"?"rgb(235 235 235)":"rgb(252 252 252)"}} onClick={handelCopyClick} >Copy to Clipboard</button>
-            </div>
+
+            <button type="button" className="btn my-3 mx-1" style={{backgroundColor: setBtnBcg(props.mode, props.theme), color: props.mode==="dark"?"rgb(235 235 235)":"rgb(252 252 252)"}} onClick={handleExtraSpaces} >Remove Extra Spaces</button>            </div>
         </div>
         <div className="container" style={{color: props.mode==="dark"?"rgb(235 235 235)":"#091921"}}>
             <h4>Text Summary</h4>
